@@ -51,7 +51,10 @@ int main(void)
 
     if (final_sum % 10 == 0)
     {
-        printf("VALID\n");
+        if (r == 4){
+            printf("VISA\n");
+            return 0;
+        }
     }
     else
     {
