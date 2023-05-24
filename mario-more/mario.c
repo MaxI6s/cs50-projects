@@ -19,7 +19,7 @@ int main(void)
         {
             str.append("#");
         }
-        str.append(" ");
+        str.append("  ");
         str.append(str);
         printf("%s/n", str);
     }
