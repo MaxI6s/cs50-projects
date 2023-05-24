@@ -13,7 +13,7 @@ int main(void)
     int i;
     for (i = 0; i < n; ++i)
     {
-        string str;
+        char str[n];
         int k;
         for (k = 0; k <= i; ++k)
         {
