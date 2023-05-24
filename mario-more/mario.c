@@ -19,11 +19,6 @@ int main(void)
         {
             printf("#");
         }
-        printf("  ");
-        for (k = 0; k <= i; ++k)
-        {
-            printf("#");
-        }
         printf("\n");
     }
 }
