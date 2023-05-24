@@ -26,6 +26,8 @@ int main(void)
     int i = 1;
     int final_sum = 0;
     int double_sum = 0;
+    int last_digit = 0;
+
     while(n != 0)
     {
         int r;
@@ -44,20 +46,35 @@ int main(void)
             final_sum += r;
         }
 
+        if (i == 15 | i == 16)
+        {
+            last_digit = last_digit * 10 + r;
+        }
+
         i++;
     }
 
     final_sum += double_sum;
+    printf("%i\n", last_digit);
 
     if (final_sum % 10 == 0)
     {
-        if (r == 4){
+        if (last_digit / 10 == 4){
             printf("VISA\n");
+            return 0;
+        }
+        if (last_digit == 34 | last_digit == 37){
+            printf("AMEX\n");
+            return 0;
+        }
+        if (last_digit / 10 == 5 & last_digit % 10 <= 5){
+            printf("MASTERCARD\n");
             return 0;
         }
     }
     else
     {
         printf("INVALID\n");
+        return 0;
     }
 }
