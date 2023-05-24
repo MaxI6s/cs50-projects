@@ -48,7 +48,7 @@ int main(void)
 
         if (i == 15 | i == 16)
         {
-            last_digit += (i - 15) * 10 r;
+            last_digit += (i - 15) * 10 * r + (i - 14) * r;
         }
 
         i++;
