@@ -15,15 +15,15 @@ int main(void)
     {
         string str;
         int k;
-        for (k = 0; k < i; ++k)
+        for (k = 0; k <= i; ++k)
         {
-            print("#");
+            printf("#");
         }
-        print("  ");
-        for (k = 0; k < i; ++k)
+        printf("  ");
+        for (k = 0; k <= i; ++k)
         {
-            print("#");
+            printf("#");
         }
-        print("/n");
+        printf("\n");
     }
 }
