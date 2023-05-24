@@ -13,19 +13,23 @@ int main(void)
     int i;
     for (i = 0; i < n; ++i)
     {
-        char str[n];
+        char str1[n];
+        char str2[n];
         int k;
         for (k = 0; k < n; ++k)
         {
-            str[k] = '#';
+            str1[k] = '#';
+            str2[n - 1 - k] = '#';
         }
-        str[n] = '\0';
+        str1[n] = '\0';
+        str2[n] = '\0';
 
-        for (k = i+1; k < n; ++k)
+        for (k = 0; k < n - i - 1; ++k)
         {
-            str[k] = ' ';
+            str1[k] = ' ';
+            str2[n - 1 - k] = ' ';
         }
 
-        printf("%s\n", str);
+        printf("%s  %s\n", str1, str2);
     }
 }
