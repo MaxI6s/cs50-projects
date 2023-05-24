@@ -55,6 +55,8 @@ int main(void)
     }
 
     final_sum += double_sum;
+    printf("%i\n", double_sum);
+    printf("%i\n", final_sum - double_sum);
 
     if (final_sum % 10 == 0)
     {
