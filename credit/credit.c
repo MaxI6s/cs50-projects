@@ -40,7 +40,7 @@ int main(void)
             final_sum += r;
         }
 
-        if (i == 14)
+        if (i == d - 2)
         {
             last_digit = n;
         }
