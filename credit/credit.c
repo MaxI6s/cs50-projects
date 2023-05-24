@@ -19,6 +19,7 @@ int main(void)
     if (d != 16)
     {
         printf("INVALID\n");
+        return 0;
     }
 
     n = N;
