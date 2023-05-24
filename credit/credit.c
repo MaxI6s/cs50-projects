@@ -46,7 +46,7 @@ int main(void)
             final_sum += r;
         }
 
-        if (i == 15 | i == 16)
+        if (i > d - 2)
         {
             last_digit += (i - 15) * 10 * r + (i - 14) * r;
         }
