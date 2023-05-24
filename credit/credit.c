@@ -46,16 +46,15 @@ int main(void)
             final_sum += r;
         }
 
-        if (i > d - 2)
+        if (i == 14)
         {
-            last_digit += (i - 15) * 10 * r + (i - 14) * r;
+            last_digit = n;
         }
 
         i++;
     }
 
     final_sum += double_sum;
-    printf("%i\n", last_digit);
 
     if (final_sum % 10 == 0)
     {
