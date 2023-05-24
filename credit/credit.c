@@ -16,12 +16,6 @@ int main(void)
         d++;
     }
 
-    if (d != 16)
-    {
-        printf("INVALID\n");
-        return 0;
-    }
-
     n = N;
     int i = 1;
     int final_sum = 0;
@@ -55,21 +49,18 @@ int main(void)
     }
 
     final_sum += double_sum;
-    printf("%i\n", double_sum);
-    printf("%i\n", final_sum - double_sum);
-    printf("%i\n", final_sum);
 
     if (final_sum % 10 == 0)
     {
-        if (last_digit / 10 == 4){
+        if ((last_digit / 10 == 4) & (d == 16 | d == 13)){
             printf("VISA\n");
             return 0;
         }
-        if (last_digit == 34 | last_digit == 37){
+        if ((last_digit == 34 | last_digit == 37) & (d == 15)){
             printf("AMEX\n");
             return 0;
         }
-        if (last_digit / 10 == 5 & last_digit % 10 <= 5){
+        if ((last_digit / 10 == 5 & last_digit % 10 <= 5) & (d == 16)){
             printf("MASTERCARD\n");
             return 0;
         }
