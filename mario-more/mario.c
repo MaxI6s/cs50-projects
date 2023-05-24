@@ -15,7 +15,6 @@ int main(void)
     {
         char str[n];
         int k;
-
         for (k = 0; k < n; ++k)
         {
             str[k] = '#';
