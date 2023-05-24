@@ -17,11 +17,13 @@ int main(void)
         int k;
         for (k = 0; k < i; ++k)
         {
-            str.append("#");
+            print("#");
         }
-        str.append("  ");
-        str.append(str);
-        printf("%s/n", str);
+        print("  ");
+        for (k = 0; k < i; ++k)
+        {
+            print("#");
+        }
+        print("/n");
     }
-
 }
