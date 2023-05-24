@@ -30,7 +30,7 @@ int main(void)
         int r;
         r = n % 10;
         n = n / 10;
-        if (i % 2 = 0){
+        if (i % 2 == 0){
             int stl = r * 2;
             while(stl != 0)
             {
@@ -44,6 +44,15 @@ int main(void)
         }
     }
 
+    final_sum += double_sum;
+    printf("%i", final_sum);
 
-
+    if (final_sum % 10 == 0)
+    {
+        printf("VALID\n");
+    }
+    else
+    {
+        printf("INVALID\n");
+    }
 }
