@@ -42,10 +42,11 @@ int main(void)
         {
             final_sum += r;
         }
+
+        i++;
     }
 
     final_sum += double_sum;
-    printf("%i", final_sum);
 
     if (final_sum % 10 == 0)
     {
