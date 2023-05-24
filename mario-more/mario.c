@@ -11,7 +11,7 @@ int main(void)
     while(n < 1 | n > 8);
 
     int i;
-    for (i = 1; i <= n; ++i)
+    for (i = 0; i < n; ++i)
     {
         char str[n];
         int k;
@@ -20,8 +20,9 @@ int main(void)
         {
             str[k] = '#';
         }
+        str[n] = '\0';
 
-        for (k = 0; k <= i; ++k)
+        for (k = i; k < n; ++k)
         {
             str[k] = '_';
         }
