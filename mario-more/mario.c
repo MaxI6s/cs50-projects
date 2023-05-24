@@ -16,7 +16,7 @@ int main(void)
     for (i = 0; i < n; ++i)
     {
         int k;
-        for (k = 0; k < n - i; ++k)
+        for (k = 0; k < n - 1 - i; ++k)
         {
             printf(" ");
         }
