@@ -22,13 +22,26 @@ int main(void)
     }
 
     n = N;
+    int i = 1;
+    int final_sum = 0;
+    int double_sum = 0;
     while(n != 0)
     {
         int r;
-        r = n%10;
-        n = n/10;
-        d++;
-        printf("%i\n", r);
+        r = n % 10;
+        n = n / 10;
+        if (i % 2 = 0){
+            int stl = r * 2;
+            while(stl != 0)
+            {
+                double_sum += stl % 10;
+                stl = stl/10;
+            }
+        }
+        else
+        {
+            final_sum += r;
+        }
     }
 
 
