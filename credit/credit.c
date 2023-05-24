@@ -57,6 +57,7 @@ int main(void)
     final_sum += double_sum;
     printf("%i\n", double_sum);
     printf("%i\n", final_sum - double_sum);
+    printf("%i\n", final_sum);
 
     if (final_sum % 10 == 0)
     {
@@ -73,9 +74,7 @@ int main(void)
             return 0;
         }
     }
-    else
-    {
-        printf("INVALID\n");
-        return 0;
-    }
+
+    printf("INVALID\n");
+
 }
