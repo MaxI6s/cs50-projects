@@ -22,9 +22,9 @@ int main(void)
         }
         str[n] = '\0';
 
-        for (k = i; k < n; ++k)
+        for (k = i+1; k < n; ++k)
         {
-            str[k] = '_';
+            str[k] = ' ';
         }
 
         printf("%s\n", str);
