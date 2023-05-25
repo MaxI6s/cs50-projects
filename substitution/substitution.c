@@ -66,7 +66,7 @@ int cipher_char(char c, int id, string key)
     char cipher_c;
     if (isupper(c))
     {
-        
+        cipher_c = 
     }
     else if (islower(c) > 0)
     {
@@ -75,8 +75,7 @@ int cipher_char(char c, int id, string key)
     }
     else
     {
-        // For non alphabetic characters id = 0.
-        id = 0;
+        cipher_c = c;
     }
     return id;
 }
