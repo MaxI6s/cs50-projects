@@ -37,13 +37,16 @@ int main(void)
     }
 }
 
+// count letters in a string
 int count_letters(string text)
 {
     int lenght = strlen(text);
     int count = 0;
     int i;
+    // for each character in string
     for (i = 0; i < lenght; i++)
     {
+        // if character is alphanumeric --> count += 1
         if (isalpha(text[i]))
         {
             count++;
@@ -52,13 +55,21 @@ int count_letters(string text)
     return count;
 }
 
+// count words in a string
 int count_words(string text)
 {
     int lenght = strlen(text);
+    // At least one word
     int count = 1;
     int i;
+    // for each character in string
     for (i = 0; i < lenght; i++)
     {
+        // if character is ' ' --> count += 1
+        // /!\ assuming that a sentence :
+        //          will contain at least one word;
+        //          will not start or end with a space; and
+        //          will not have multiple spaces in a row.
         if (isspace(text[i]))
         {
             count++;
@@ -67,13 +78,20 @@ int count_words(string text)
     return count;
 }
 
+// count sentences in a string
 int count_sentences(string text)
 {
     int lenght = strlen(text);
     int count = 0;
     int i;
+    // for each character in string
     for (i = 0; i < lenght; i++)
     {
+        // if character is '.' or '?' or '!' --> count += 1
+        // /!\ assuming that a sentence :
+        //          will contain at least one word;
+        //          will not start or end with a space; and
+        //          will not have multiple spaces in a row.
         if ((text[i] == '.') | (text[i] == '?') | (text[i] == '!'))
         {
             count++;
