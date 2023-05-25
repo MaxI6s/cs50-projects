@@ -100,6 +100,14 @@ int check_key(string key)
         {
             return 0;
         }
+        int k;
+        for (k = 0; k < i; k++)
+        {
+            if (tolower(key[k]) == tolower(key[i]))
+            {
+                return 0;
+            }
+        }
     }
 
     return 1;
