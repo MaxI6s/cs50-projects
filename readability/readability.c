@@ -11,10 +11,13 @@ int count_sentences(string text);
 int main(void)
 {
     string text = get_string("Text : ");
+
+    // Compute counts for letters, words and sentences
     int letters_count = count_letters(text);
     int words_count = count_words(text);
     int sentences_count = count_sentences(text);
 
+    // Compute L and S 
     float L = 100 * (float)letters_count / (float)words_count;
     float S = 100 * (float)sentences_count / (float)words_count;
 
@@ -66,7 +69,7 @@ int count_words(string text)
     for (i = 0; i < lenght; i++)
     {
         // if character is ' ' --> count += 1
-        // /!\ assuming that a sentence :
+        // /!\ assuming that the text :
         //          will contain at least one word;
         //          will not start or end with a space; and
         //          will not have multiple spaces in a row.
@@ -88,10 +91,7 @@ int count_sentences(string text)
     for (i = 0; i < lenght; i++)
     {
         // if character is '.' or '?' or '!' --> count += 1
-        // /!\ assuming that a sentence :
-        //          will contain at least one word;
-        //          will not start or end with a space; and
-        //          will not have multiple spaces in a row.
+        // /!\ considering any sequence of characters that ends with a '.' or a '!' or a '?' to be a sentence
         if ((text[i] == '.') | (text[i] == '?') | (text[i] == '!'))
         {
             count++;
