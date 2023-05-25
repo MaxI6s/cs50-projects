@@ -25,6 +25,7 @@ int main(int argc, string argv[])
     for (i = 0; i < text_lenght; i++)
     {
         c = plaintext[i];
+        char cipher_c;
         int id = get_id(c);
         if (id == 0)
         {
