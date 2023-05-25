@@ -52,7 +52,6 @@ int compute_score(string word)
 // Get the id of the character in alphabet.
 // Ex : get_id('a') --> 1
 //      get_id('c') --> 3
-
 int get_id(char c)
 {
     int id;
