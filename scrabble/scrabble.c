@@ -65,11 +65,11 @@ int get_id(char c)
     int id;
     if isupper(c)
     {
-        id = c - 40;
+        id = c - 64;
     }
     if islower(c)
     {
-        id = c - 60;
+        id = c - 96;
     }
     else
     {
