@@ -1,6 +1,10 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
+
+int get_id(char c);
+char cipher_char(char c, int id, string key);
 
 int main(int argc, string argv[])
 {
@@ -21,23 +25,18 @@ int main(int argc, string argv[])
 
     string plaintext = get_string("Plaintext: ");
     int text_lenght = strlen(plaintext);
+    string ciphertext = plaintext;
 
+    int i;
     for (i = 0; i < text_lenght; i++)
     {
-        c = plaintext[i];
+        char c = plaintext[i];
         int id = get_id(c);
-
-        if (id == 0)
-        {
-            // if c is a non alphabetic character score = score.
-            score += 0;
-        }
-        else
-        {
-            // else the letter's value is added to score.
-            score += POINTS[id - 1];
-        }
+        char cipher_c = cipher_char(c, id, key);
+        ciphertext[i] = cipher_c;
     }
+
+    printf("ciphertext: %s", ciphertext);
 }
 
 int get_id(char c)
@@ -61,21 +60,20 @@ int get_id(char c)
     return id;
 }
 
-int cipher_char(char c, int id, string key)
+char cipher_char(char c, int id, string key)
 {
     char cipher_c;
     if (isupper(c))
     {
-        cipher_c = 
+        cipher_c = toupper(c);
     }
-    else if (islower(c) > 0)
+    else if (islower(c))
     {
-        // Lowercase alphabet start with 'a'(95).
-        id = c - 96;
+        cipher_c = tolower(c);
     }
     else
     {
         cipher_c = c;
     }
-    return id;
+    return cipher_c;
 }
