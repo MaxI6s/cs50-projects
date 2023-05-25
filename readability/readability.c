@@ -17,15 +17,16 @@ int main(void)
     int words_count = count_words(text);
     int sentences_count = count_sentences(text);
 
-    // Compute L and S 
+    // Compute L and S
+    // where L is the average number of letters per 100 words in the text, and S is the average number of sentences per 100 words in the text.
     float L = 100 * (float)letters_count / (float)words_count;
     float S = 100 * (float)sentences_count / (float)words_count;
 
+    // Compute Coleman-Liau index and grade
     float index = 0.0588 * L - 0.296 * S - 15.8;
-    printf("L: %f S: %f Index: %f\n", L, S, index);
-
     int grade = round(index);
 
+    // Print grade
     if (grade >= 16)
     {
         printf("Grade 16+\n");
