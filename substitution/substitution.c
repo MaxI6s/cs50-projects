@@ -11,17 +11,18 @@ int main(int argc, string argv[])
     }
 
     string key = argv[1];
-    int lenght = strlen(key);
+    int key_lenght = strlen(key);
 
-    if (lenght != 26)
+    if (key_lenght != 26)
     {
         printf("Key must contain 26 characters.\n");
         return 1;
     }
 
     string plaintext = get_string("Plaintext: ");
+    int text_lenght = strlen(plaintext);
 
-    for (i = 0; i < lenght; i++)
+    for (i = 0; i < text_lenght; i++)
     {
         c = plaintext[i];
         int id = get_id(c);
