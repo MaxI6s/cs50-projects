@@ -14,7 +14,7 @@ int main(void)
     int words_count = count_words(text);
     int sentences_count = count_sentences(text);
 
-    
+    long L = long(letters_count / words_count
 }
 
 int count_letters(string text)
