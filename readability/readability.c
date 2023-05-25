@@ -15,8 +15,11 @@ int main(void)
     int sentences_count = count_sentences(text);
 
     double L = 100 * letters_count / words_count;
+    double S = 100 * words_count / sentences_count;
 
-    printf("L = %d\n", L);
+    double index = 0.0588 * L - 0.296 * S - 15.8;
+
+    printf("index = %f\n", index);
 }
 
 int count_letters(string text)
