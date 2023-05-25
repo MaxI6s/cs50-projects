@@ -36,7 +36,7 @@ int main(int argc, string argv[])
         ciphertext[i] = cipher_c;
     }
 
-    printf("ciphertext: %s", ciphertext);
+    printf("ciphertext: %s\n", ciphertext);
 }
 
 int get_id(char c)
@@ -65,11 +65,11 @@ char cipher_char(char c, int id, string key)
     char cipher_c;
     if (isupper(c))
     {
-        cipher_c = toupper(c);
+        cipher_c = toupper(key[id]);
     }
     else if (islower(c))
     {
-        cipher_c = tolower(c);
+        cipher_c = tolower(key[id]);
     }
     else
     {
