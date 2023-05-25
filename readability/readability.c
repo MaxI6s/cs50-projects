@@ -14,7 +14,9 @@ int main(void)
     int words_count = count_words(text);
     int sentences_count = count_sentences(text);
 
-    long L = long(letters_count / words_count)
+    double L = 100 * letters_count / words_count;
+
+    printf("L = %d\n", L);
 }
 
 int count_letters(string text)
