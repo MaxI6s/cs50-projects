@@ -8,6 +8,7 @@ int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 
 
 int compute_score(string word);
 int get_id(char c);
+int print_result(int score1, int score2);
 
 int main(void)
 {
@@ -19,23 +20,8 @@ int main(void)
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
 
-    // Tie
+    print_result(int score1, int score2);
 
-    if (score1 == score2)
-    {
-        printf("Tie!\n");
-        return 0;
-    }
-    if (score1 > score2)
-    {
-        printf("Player 1 wins!\n");
-        return 0;
-    }
-    if (score1 < score2)
-    {
-        printf("Player 2 wins!\n");
-        return 0;
-    }
 }
 
 int compute_score(string word)
@@ -78,3 +64,24 @@ int get_id(char c)
     return id;
 }
 
+int print_result(int score1, int score2)
+{
+    // Tie
+    if (score1 == score2)
+    {
+        printf("Tie!\n");
+        return 0;
+    }
+    // Player 1 wins
+    if (score1 > score2)
+    {
+        printf("Player 1 wins!\n");
+        return 0;
+    }
+    // Player 2 wins
+    if (score1 < score2)
+    {
+        printf("Player 2 wins!\n");
+        return 0;
+    }
+}
