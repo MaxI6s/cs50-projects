@@ -75,6 +75,7 @@ int get_id(char c)
     {
         id = 0;
     }
+    printf("Char: %c --> Id : %i", c, id);
     return id;
 }
 
