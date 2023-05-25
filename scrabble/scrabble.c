@@ -48,7 +48,6 @@ int compute_score(string word)
     {
         c = word[i];
         int id = get_id(c);
-        printf("Char: %c --> Is upper : %i --> Id : %i\n", c, isupper(c), id);
         if (id == 0)
         {
             score += 0;
@@ -68,13 +67,13 @@ int get_id(char c)
     {
         id = c - 64;
     }
-    if (islower(c) > 0)
+    else if (islower(c) > 0)
     {
         id = c - 96;
     }
     else
     {
-        id = c;
+        id = 0;
     }
     return id;
 }
