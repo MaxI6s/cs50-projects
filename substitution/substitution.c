@@ -5,6 +5,7 @@
 
 int get_id(char c);
 char cipher_char(char c, int id, string key);
+int check_key(string key);
 
 int main(int argc, string argv[])
 {
@@ -15,12 +16,9 @@ int main(int argc, string argv[])
     }
 
     string key = argv[1];
-    int key_lenght = strlen(key);
-
-    if (key_lenght != 26)
+    if (check_key(key) == 0)
     {
         printf("Key must contain 26 characters.\n");
-        return 1;
     }
 
     string plaintext = get_string("Plaintext: ");
@@ -83,4 +81,25 @@ char cipher_char(char c, int id, string key)
         cipher_c = c;
     }
     return cipher_c;
+}
+
+int check_key(string key)
+{
+    int key_lenght = strlen(key);
+
+    if (key_lenght != 26)
+    {
+        return 0;
+    }
+
+    int i;
+    for (i = 0; i < key_lenght; i++)
+    {
+        if (isalpha(key[i]) == 0)
+        {
+            return 0;
+        }
+    }
+
+    return 1;
 }
