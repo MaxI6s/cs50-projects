@@ -63,13 +63,17 @@ int get_id(char c)
 char cipher_char(char c, int id, string key)
 {
     char cipher_c;
-    if (isupper(c))
+
+    if (id > 0)
     {
-        cipher_c = toupper(key[id]);
-    }
-    else if (islower(c))
-    {
-        cipher_c = tolower(key[id]);
+        if (isupper(c))
+        {
+            cipher_c = toupper(key[id - 1]);
+        }
+        if (islower(c))
+        {
+            cipher_c = tolower(key[id - 1]);
+        }
     }
     else
     {
