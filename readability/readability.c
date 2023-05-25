@@ -19,6 +19,7 @@ int main(void)
     float S = 100 * sentences_count / words_count;
 
     float index = 0.0588 * L - 0.296 * S - 15.8;
+    printf("L: %f S: %f Index: %f\n", L, S, index);
 
     int grade = round(index);
 
