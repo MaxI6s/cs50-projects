@@ -63,11 +63,11 @@ int compute_score(string word)
 int get_id(char c)
 {
     int id;
-    if (isupper(c))
+    if (isupper(c) > 0)
     {
         id = c - 64;
     }
-    if (islower(c))
+    if (islower(c) > 0)
     {
         id = c - 96;
     }
