@@ -5,6 +5,7 @@
 
 int count_letters(string text);
 int count_words(string text);
+int count_sentences(string text);
 
 int main(void)
 {
@@ -37,6 +38,21 @@ int count_words(string text)
     for (i = 0; i < lenght; i++)
     {
         if (isspace(text[i]))
+        {
+            count++;
+        }
+    }
+    return count;
+}
+
+int count_sentences(string text)
+{
+    int lenght = strlen(text);
+    int count = 0;
+    int i;
+    for (i = 0; i < lenght; i++)
+    {
+        if ((text[i] == '.') | (text[i] == '?') | (text[i] == '!'))
         {
             count++;
         }
