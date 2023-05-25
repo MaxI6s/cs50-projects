@@ -9,7 +9,7 @@ int check_key(string key);
 
 int main(int argc, string argv[])
 {
-    // 
+    //
     if (argc != 2)
     {
         printf("Usage: ./substitution key\n");
@@ -27,19 +27,24 @@ int main(int argc, string argv[])
     int text_lenght = strlen(plaintext);
     string ciphertext = plaintext;
 
+    // for each character in text
     int i;
     for (i = 0; i < text_lenght; i++)
     {
         char c = plaintext[i];
+        // Get the id of the character in alphabet
         int id = get_id(c);
+        // Get the corresponding character in key
         char cipher_c = cipher_char(c, id, key);
         ciphertext[i] = cipher_c;
     }
 
+    // Print cipher
     printf("ciphertext: %s\n", ciphertext);
+    return 0;
 }
 
-// Get the id of the character in alphabet.
+// Get the id of the character in alphabet
 // Ex : get_id('a') --> 1
 //      get_id('c') --> 3
 int get_id(char c)
@@ -63,10 +68,11 @@ int get_id(char c)
     return id;
 }
 
+// Return the corresponding cipher car for a valid key
 char cipher_char(char c, int id, string key)
 {
     char cipher_c;
-
+    // if id > 0 (alphabetical characters)
     if (id > 0)
     {
         if (isupper(c))
@@ -78,6 +84,7 @@ char cipher_char(char c, int id, string key)
             cipher_c = tolower(key[id - 1]);
         }
     }
+    // if id = 0 (non alphabetical characters)
     else
     {
         cipher_c = c;
@@ -85,6 +92,7 @@ char cipher_char(char c, int id, string key)
     return cipher_c;
 }
 
+// Check the validity of the key
 int check_key(string key)
 {
     int key_lenght = strlen(key);
@@ -94,6 +102,7 @@ int check_key(string key)
         return 0;
     }
 
+    // for each character in key check if it's an alphabetical character and if it occurs only once in key
     int i;
     for (i = 0; i < key_lenght; i++)
     {
