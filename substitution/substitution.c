@@ -25,8 +25,8 @@ int main(int argc, string argv[])
     for (i = 0; i < text_lenght; i++)
     {
         c = plaintext[i];
-        char cipher_c;
         int id = get_id(c);
+
         if (id == 0)
         {
             // if c is a non alphabetic character score = score.
@@ -47,6 +47,26 @@ int get_id(char c)
     {
         // Uppercase alphabet start with 'A'(65).
         id = c - 64;
+    }
+    else if (islower(c) > 0)
+    {
+        // Lowercase alphabet start with 'a'(95).
+        id = c - 96;
+    }
+    else
+    {
+        // For non alphabetic characters id = 0.
+        id = 0;
+    }
+    return id;
+}
+
+int cipher_char(char c, int id, string key)
+{
+    char cipher_c;
+    if (isupper(c))
+    {
+        
     }
     else if (islower(c) > 0)
     {
