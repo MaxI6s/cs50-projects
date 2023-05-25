@@ -69,13 +69,15 @@ int get_id(char c)
     }
     if islower(c)
     {
-        id = c - 96;
+        // id = c - 96;
+        id = c;
     }
     else
     {
-        id = 0;
+        id = c;
     }
-    printf("Char: %c --> Id : %i\n", c, id);
+
+    printf("Char: %c --> Is upper : %i --> Id : %i\n", c, isupper(c), id);
     return id;
 }
 
